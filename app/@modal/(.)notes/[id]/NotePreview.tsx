@@ -1,8 +1,10 @@
-import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
-import { fetchNoteById } from "@/lib/api"; // або твоя назва API-функції
-import NotePreviewClient from "./NotePreview.client"; 
-
-
+import {
+  dehydrate,
+  HydrationBoundary,
+  QueryClient,
+} from "@tanstack/react-query";
+import { fetchNoteById } from "@/lib/api/clientApi";
+import NotePreviewClient from "./NotePreview.client";
 
 interface NotePreviewProps {
   id: string;
