@@ -8,8 +8,8 @@ interface LayoutProps {
 export default function FilterLayout({ children, sidebar }: LayoutProps) {
   return (
     <section className={css.container}>
-      <aside className={css.sidebar}>{sidebar}</aside>
-      <div className={css.notesWrapper}>{children}</div>
+    <aside className={css.sidebar}>{sidebar}</aside>
+    <div className={css.notesWrapper}>{children}</div>
     </section>
   );
 }
