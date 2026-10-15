@@ -4,7 +4,6 @@ import css from "./SidebarNotes.module.css";
 const tags = ["Todo", "Work", "Personal", "Meeting", "Shopping"];
 
 export default function SidebarNotes() {
-  console.log(SidebarNotes)
   return (
     <>
       <ul className={css.menuList}>

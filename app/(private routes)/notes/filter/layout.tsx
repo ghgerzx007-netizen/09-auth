@@ -1,8 +1,8 @@
 import css from "./LayoutNotes.module.css"
-
-interface LayoutProps {
-  children: React.ReactNode;
-  sidebar: React.ReactNode;
+import type { ReactNode } from "react";
+interface LayoutProps { 
+  children: ReactNode;
+  sidebar: ReactNode;
 }
 
 export default function FilterLayout({ children, sidebar }: LayoutProps) {
