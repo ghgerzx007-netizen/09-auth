@@ -1,6 +1,28 @@
 import { cookies } from "next/headers";
-import { api } from "../../app/api/api";
+import { api } from "./api";
+import { Note } from "@/types/note";
+import { FetchNotesResponse, NotesParams } from "./clientApi";
 
+export const fetchNotes = async (
+  page?: number,
+  search?: string,
+  tag?: string,
+): Promise<FetchNotesResponse> => {
+  const normalizedTag = tag && tag !== "all" ? tag : undefined;
+  const response = await api.get<FetchNotesResponse>("/notes", {
+    params: {
+      perPage: 12,
+      page,
+      search,
+      tag: normalizedTag,
+    } as NotesParams,
+  });
+  return response.data;
+};
+
+export const fetchNoteById = async (id: string): Promise<Note> => {
+  return (await api.get<Note>(`/notes/${id}`)).data;
+};
 
 export const checkServerSession = async () => {
   const cookieStore = await cookies();

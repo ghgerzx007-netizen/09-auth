@@ -72,7 +72,7 @@ import type { Note } from "../../types/note.ts";
 import type { User } from "../../types/user.ts";
 import { cookies } from "next/headers.js";
 
-interface NotesParams {
+ export interface NotesParams {
   perPage?: number;
   page?: number;
   search?: string;
