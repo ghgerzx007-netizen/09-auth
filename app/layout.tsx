@@ -5,7 +5,6 @@ import { Roboto } from 'next/font/google';
 import { Metadata } from 'next';
 import AuthProvider from "../components/AuthProvider/AuthProvider";
 
-
 const roboto = Roboto({
   subsets: ['latin'], 
   weight: ['400', '700'],
